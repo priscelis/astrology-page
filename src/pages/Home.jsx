@@ -3,11 +3,11 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-    <p>no se que hacer
-    </p>
-    Este es el home
-    <h1 className="text-amber-600  rounded-xl">Esta es la prueba</h1>
+    <div className="w-full h-screen  rounded-xl  bg-gradient-to-b from-[#D6AC71]/70 to-[#251B13]/30">
+
     
+    
+    </div>
     </>
   )
 }

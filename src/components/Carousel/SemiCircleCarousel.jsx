@@ -7,6 +7,7 @@ import star1 from "./images-carrousel/star1.png";
 import star2 from "./images-carrousel/star2.png";
 import lunallena from "./images-carrousel/lunallena.png";
 import lunanueva from "./images-carrousel/lunanueva.png";
+import { useNavigate } from "react-router-dom";
 
 // helpers SVG
 function polarToCartesian(cx, cy, r, angleDeg) {
@@ -83,14 +84,38 @@ export default function SemiCircleCarousel() {
   // cantidad de elementos a pintar (copia extra al final para cubrir el borde derecho)
   const total = count + 1;
 
+  const manejarClick = () => {
+    if (nombre.trim() !== "") {
+      navigate(`/saludo/${nombre}`);
+    }
+  };
+
+  // Para pasar al otro componente de opciones
+  const navigate = useNavigate();
+
+const goToOptions = () => {
+  if (nombre.trim() !== "") {
+    navigate(`/options/${nombre}`);
+  }
+};
+
+    const [nombre, setNombre] = useState("");
+  const [mostrarSaludo, setMostrarSaludo] = useState(false);
+
+  const handleSubmit = () => {
+    if (nombre.trim() !== "") {
+      setMostrarSaludo(true);
+    }
+  };
   return (
-    <div className="w-full flex justify-center min-h-screen">
+    <div className=" w-full flex justify-center min-h-screen">
       <div ref={contRef} className="relative w-[92vw] max-w-[1100px]">
+         
         {/* altura = R -> solo se ve la mitad superior */}
         <div className="relative overflow-hidden" style={{ height: R }}>
           {/* arco superior */}
           <svg
-            className="absolute left-1/2 -translate-x-1/2 top-0"
+            className="mt-9 absolute left-1/2 -translate-x-1/2 top-0"
             viewBox={`0 0 ${R * 2} ${R}`}
             width={R * 2}
             height={R}
@@ -105,7 +130,7 @@ export default function SemiCircleCarousel() {
           </svg>
 
           {/* imágenes moviéndose de forma CONTINUA en 180° → 0°, con copia extra */}
-          <div className="absolute inset-0">
+          <div className=" mt-9 absolute inset-0">
             {Array.from({ length: total }).map((_, i) => {
               const src = photos[i % count];
               const vis = ((i * spacing + angleOffset) % 180 + 180) % 180;
@@ -143,9 +168,35 @@ export default function SemiCircleCarousel() {
             <h2 className="text-white text-3xl md:text-4xl font-semibold">🔮 ¿Quieres aprender del horóscopo?</h2>
             <p className="text-white/90 mt-1">Aprende con nosotras</p>
             <hr className="mt-3 border-t border-white/40 w-1/2 mx-auto" />
+            
           </div>
+          
         </div>
+         <div className=" rounded-[20px]  ml-[300px] mt-[10px] w-[500px] h-[250px] p-[40px] bg-[#DCC6A5]">
+
+           <h4 className="text-xl"> Ingresa tu nombre: </h4>
+           <input type="text" 
+           className="bg-white h-[40px] rounded-[5px]" value={nombre}
+           onChange={(e) => setNombre(e.target.value)}
+           
+           placeholder="Coloca tu nombre"/>
+           
+           <br /><br />
+           {/* Aqui centré el boton*/}
+           <center>
+                <button 
+                className="border-red-500 bg-red-500 w-[100px] h-[50px] rounded-[10px] text-white" type="submit"
+               onClick={goToOptions}
+                >Entrar!</button>
+          </center>
+
+         </div>
+          
+      
+    
       </div>
+      
     </div>
   );
+  
 }

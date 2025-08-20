@@ -1,7 +1,9 @@
 import axios from "axios";
 const realAPI = "https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot"
 
-export const getAllButterflies = async () => {
+
+// Para ver todas las cartas. 
+export const getAllAstrologyCards = async () => {
     try {
         const response = await axios.get(realAPI);
         return response.data;
@@ -11,9 +13,9 @@ export const getAllButterflies = async () => {
 
 };
 
-export const getOneButterfly = async (id) => {
+export const getOneAstrologyCard = async (id) => {
     try {
-        const response = await axios.get(realAPI + id);
+        const response = await axios.get(`${realAPI}/${(id)}`);
         return response.data;
     } catch (error) {
         console.log(`Error, no se reconoce esta carta 

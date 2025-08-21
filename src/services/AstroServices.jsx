@@ -8,7 +8,7 @@ export const getAllAstrologyCards = async () => {
         const response = await axios.get(realAPI);
         return response.data;
     } catch (error) {
-        console.log(`Error al sacar las mariposas en ButterflyServices: ${error}.`);
+        console.log(`Error al sacar esta carta en AstroServices: ${error}.`);
     }
 
 };

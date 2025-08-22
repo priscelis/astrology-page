@@ -96,11 +96,11 @@ function SeeOneCard() {
                   <div className="mb-6">
                     <h1
                       className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 
-                                 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text"
+                              bg-clip-text"
                     >
                       {oneCard.arcaneNumber}. {oneCard.arcaneName}
                     </h1>
-                    <div className="h-1 w-24 bg-gradient-to-r from-[#243851] to-[#f5f5dc] rounded-full mx-auto lg:mx-0"></div>
+                    <div className="h-1 w-24 bg-white rounded-full mx-auto lg:mx-0"></div>
                   </div>
 
                   <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
@@ -134,12 +134,11 @@ function SeeOneCard() {
                   <div className="mb-6">
                     <h1
                       className="text-3xl lg:text-4xl xl:text-5xl font-bold  mb-2 
-                                bg-gradient-to-r from-[#243851] 
-                                to-[#f5f5dc] bg-clip-text text-transparent"
+                                bg-white bg-clip-text text-transparent"
                     >
                       {oneCard.goddessName}
                     </h1>
-                    <div className="h-1 w-24 bg-gradient-to-r from-[#243851] to-[#f5f5dc] rounded-full mx-auto lg:mx-0"></div>
+                    <div className="h-1 w-24 bg-white rounded-full mx-auto lg:mx-0"></div>
                   </div>
 
                   <div className="bg-white/5 rounded-2xl p-6 border border-white/10">

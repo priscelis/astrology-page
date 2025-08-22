@@ -1,9 +1,11 @@
-import React from 'react'
+
 import { createBrowserRouter} from 'react-router-dom'
 import Layout from "../layout/Layout";
 import Home from "../pages/Home";
 import Options from "../pages/Options";
-
+import AllCards from '../pages/AllCards.jsx';
+import SeeOneCard from "../pages/SeeOneCard.jsx"
+import SeeThreeCards from "../pages/SeeThreeCards.jsx";
 
 const AstroRouter = createBrowserRouter([
   {
@@ -15,9 +17,21 @@ const AstroRouter = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/options",
+        path: "/options/:nombre",
         element: <Options />,
-      }
+      },
+      {
+        path: "/allcards",
+        element: <AllCards/>
+      },
+      {
+        path:`/cardmeaning/:id`,
+        element: <SeeOneCard/> 
+      },
+      {
+        path: "/past-present-future",
+        element: <SeeThreeCards/>
+      },
     ],
   },
 ]);

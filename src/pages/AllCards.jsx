@@ -95,13 +95,13 @@ function AllCards() {
                 <div className="mt-4 flex items-center justify-center gap-2 flex-nowrap">
                   <button
                     onClick={closeCard}
-                    className="h-10 w-10 rounded-full bg-red-500 text-white font-medium
+                    className="h-[70px] w-[100px] rounded-[20px] bg-red-500 text-white font-medium
                     hover:brightness-110
                                transition-all duration-300 ease-in-out transform-gpu
                                hover:scale-105 hover:shadow-2xl hover:-translate-y-0.5"
                     aria-label="Cerrar"
                   >
-                    x
+                    <h5 className="text-[15px]">Cerrar</h5>
                   </button>
 
                   <Link

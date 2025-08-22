@@ -12,9 +12,9 @@ const Options = () => {
         <Greeting nombre={nombre} />
       </article>
 
-      {/* Contenedor principal responsive */}
+      
       <section className="flex justify-center mt-8 md:mt-12 lg:mt-16 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-24 max-w-6xl w-full">
+  <div className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-16 xl:gap-24 max-w-6xl w-full">
           
           {/* Primera opción */}
           <Link to="/allcards" className="flex-1 max-w-md mx-auto lg:mx-0">

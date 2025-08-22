@@ -6,8 +6,8 @@ function Greeting() {
   return (
     <>
   
-    <div className="text-center">
-      <h1>¡Hola {nombre}!</h1>
+    <div className="text-center text-[80px]">
+      <span><h1>¡Hola {nombre}!</h1></span>
       <p>¿Qué te gustaría hacer?</p>
     </div>
   

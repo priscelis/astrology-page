@@ -68,10 +68,10 @@ function SeeThreeCard() {
         <section className="flex justify-center mb-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl w-full max-w-[800px] p-6 sm:p-8 md:p-10 lg:p-16 
                         shadow-2xl border border-white/20 relative overflow-hidden text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-bold mb-4 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[50px] font-bold mb-4 leading-tight text-white">
               Lectura: Pasado · Presente · Futuro
             </h1> 
-            <span className="text-base sm:text-lg md:text-xl lg:text-[20px] text-slate-600 block">
+            <span className="text-base sm:text-lg md:text-xl lg:text-[20px] text-white block">
               {selected.length < 3
                 ? `Elige ${3 - selected.length} cartas`
                 : "¡Listo! Revisa tu lectura abajo."}
@@ -140,7 +140,7 @@ function SeeThreeCard() {
                     disabled={picked || selected.length >= 3}
                     className={`w-full max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] 
                                aspect-[3/4] transition-all duration-300 ease-in-out transform-gpu
-                               focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2
+                               focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2
                                ${
                                  picked || selected.length >= 3
                                    ? "opacity-50 cursor-not-allowed scale-95"
@@ -167,7 +167,7 @@ function SeeThreeCard() {
                     <div
                       key={step}
                       className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                        step <= selected.length ? 'bg-purple-500' : 'bg-gray-300'
+                        step <= selected.length ? 'bg-amber-600' : 'bg-gray-300'
                       }`}
                     />
                   ))}

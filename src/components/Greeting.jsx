@@ -11,11 +11,11 @@ function Greeting() {
 
     <div className="text-center text-[100px] ">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
-                     font-bold text-gray-800 mb-2 sm:mb-4 md:mb-6
+                     font-bold text-white mb-2 sm:mb-4 md:mb-6
                     
                      bg-clip-text ">¡Hola {nombre}!</h1>
       <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 
-                    text-gray-600 font-medium"> ¿Qué te gustaría hacer?</p>
+                    text-white font-medium"> ¿Qué te gustaría hacer?</p>
     </div>
   
  </div>
